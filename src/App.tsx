@@ -1,3 +1,5 @@
+import { Grid, Typography } from "@mui/material";
+
 import Animal from "./components/Animal";
 import ANIMALS from "./data/animals";
 import "./App.css";
@@ -5,12 +7,16 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>Animals</h1>
-      <ul>
+      <Typography variant="h1">Animals</Typography>
+      <Grid container direction="column">
         {ANIMALS.map((animal) => {
-          return <Animal animal={animal} />;
+          return (
+            <Grid item key={animal.name}>
+              <Animal animal={animal} />
+            </Grid>
+          );
         })}
-      </ul>
+      </Grid>
     </>
   );
 }

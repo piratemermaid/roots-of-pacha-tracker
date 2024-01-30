@@ -1,7 +1,20 @@
+import { Grid, Typography } from "@mui/material";
+
 import type { Animal } from "../types/animal";
 
 type Props = { animal: Animal };
 
 export default function Animal({ animal }: Props) {
-  return <li>{animal.name}</li>;
+  return (
+    <>
+      <Typography variant="h2">{animal.name}</Typography>
+      <Grid container spacing={2} justifyContent="center">
+        {animal.colors.map((color) => (
+          <Grid item key={color}>
+            <Typography variant="body1">{color}</Typography>
+          </Grid>
+        ))}
+      </Grid>
+    </>
+  );
 }
