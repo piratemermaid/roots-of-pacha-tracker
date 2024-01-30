@@ -11,6 +11,9 @@ const theme = createTheme({
     secondary: {
       main: "#b98a61",
     },
+    action: {
+      disabled: "#c4b09f",
+    },
   },
 
   typography: {
