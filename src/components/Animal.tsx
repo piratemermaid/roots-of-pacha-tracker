@@ -7,7 +7,9 @@ type Props = { animal: Animal };
 export default function Animal({ animal }: Props) {
   return (
     <>
-      <Typography variant="h2">{animal.name}</Typography>
+      <Grid item sx={{ m: 2 }}>
+        <Typography variant="h2">{animal.name}</Typography>
+      </Grid>
       <Grid container spacing={2} justifyContent="center">
         {animal.colors.map((color) => (
           <Grid item key={color}>
