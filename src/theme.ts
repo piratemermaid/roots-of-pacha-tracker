@@ -1,29 +1,29 @@
-import { createTheme } from "@mui/material";
+import { createTheme } from '@mui/material';
 
 const theme = createTheme({
   spacing: 8,
 
   palette: {
-    mode: "light",
+    mode: 'light',
     primary: {
-      main: "#7dc599",
+      main: '#7dc599',
     },
     secondary: {
-      main: "#b98a61",
+      main: '#b98a61',
     },
     action: {
-      disabled: "#c4b09f",
+      disabled: '#c4b09f',
     },
   },
 
   typography: {
-    h1: { fontSize: "30px", color: "#7dc599" },
+    h1: { fontSize: '30px', color: '#7dc599' },
     h2: {
-      fontSize: "20px",
+      fontSize: '20px',
       fontWeight: 500,
-      textTransform: "uppercase",
-      fontFamily: "Garamond",
-      color: "#b98a61",
+      textTransform: 'uppercase',
+      fontFamily: 'Garamond',
+      color: '#b98a61',
     },
   },
 });

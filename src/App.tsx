@@ -1,9 +1,9 @@
-import { Grid, ThemeProvider, Typography } from "@mui/material";
+import { Grid, ThemeProvider, Typography } from '@mui/material';
 
-import Animal from "./components/Animal";
-import ANIMALS from "./data/animals";
-import theme from "./theme";
-import "./App.css";
+import Animal from './components/Animal';
+import ANIMALS from './data/animals';
+import theme from './theme';
+import './App.css';
 
 function App() {
   return (

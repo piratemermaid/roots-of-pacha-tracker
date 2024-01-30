@@ -1,6 +1,6 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography } from '@mui/material';
 
-import type { Animal } from "../types/animal";
+import type { Animal } from '../types/animal';
 
 type Props = { animal: Animal };
 

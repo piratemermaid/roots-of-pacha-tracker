@@ -1,37 +1,37 @@
-import ANIMAL_COLORS from "./animalColors";
-import type { Animal } from "../types/animal";
+import ANIMAL_COLORS from './animalColors';
+import type { Animal } from '../types/animal';
 
 const ANIMALS: Animal[] = [
   {
-    name: "Ibex",
+    name: 'Ibex',
     colors: ANIMAL_COLORS.Ibex,
   },
   {
-    name: "Boar",
+    name: 'Boar',
     colors: ANIMAL_COLORS.Boar,
   },
   {
-    name: "Bison",
+    name: 'Bison',
     colors: ANIMAL_COLORS.Bison,
   },
   {
-    name: "Guanaco",
+    name: 'Guanaco',
     colors: ANIMAL_COLORS.Guanaco,
   },
   {
-    name: "Ostrich",
+    name: 'Ostrich',
     colors: ANIMAL_COLORS.Ostrich,
   },
   {
-    name: "Aurochs",
+    name: 'Aurochs',
     colors: ANIMAL_COLORS.Aurochs,
   },
   {
-    name: "Junglefowl",
+    name: 'Junglefowl',
     colors: ANIMAL_COLORS.Junglefowl,
   },
   {
-    name: "Horse",
+    name: 'Horse',
     colors: ANIMAL_COLORS.Horse,
   },
 ];
