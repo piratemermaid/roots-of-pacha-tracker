@@ -1,7 +1,7 @@
-import { Grid, Typography } from '@mui/material';
+import { Checkbox, Grid, Typography } from '@mui/material';
 
 import { useStore } from '../store';
-import type { Animal } from '../types/data';
+import type { Animal, AnimalName } from '../types/data';
 
 type Props = { animal: Animal };
 
@@ -14,6 +14,16 @@ export default function Animal({ animal }: Props) {
     (state) => state.removeUserAnimalColor
   );
 
+  const handleToggleColor = (
+    name: AnimalName,
+    color: string,
+    userHasColor: boolean
+  ) => {
+    !userHasColor
+      ? addUserAnimalColor(name, color)
+      : removeUserAnimalColor(name, color);
+  };
+
   return (
     <>
       <Grid item sx={{ m: 2 }}>
@@ -25,12 +35,16 @@ export default function Animal({ animal }: Props) {
 
           return (
             <Grid item key={color}>
+              <Checkbox
+                checked={userHasColor}
+                onClick={() =>
+                  handleToggleColor(animal.name, color, userHasColor)
+                }
+              />
               <Typography
                 variant="body1"
                 onClick={() =>
-                  !userHasColor
-                    ? addUserAnimalColor(animal.name, color)
-                    : removeUserAnimalColor(animal.name, color)
+                  handleToggleColor(animal.name, color, userHasColor)
                 }
                 sx={{
                   cursor: 'pointer',
