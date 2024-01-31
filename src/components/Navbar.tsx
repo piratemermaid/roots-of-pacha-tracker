@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Grid container>
+      <Grid container spacing={2}>
         {Object.keys(ROUTES).map((key) => (
           <NavbarLink key={key} name={ROUTES[key]} label={ROUTE_LABELS[key]} />
         ))}
