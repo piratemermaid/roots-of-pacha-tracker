@@ -19,9 +19,9 @@ const darkTheme = createTheme({
   },
 
   typography: {
-    h1: { ...mainThemeVars.typography.h1, color: '#7dc599' },
+    h2: { ...mainThemeVars.typography.h2, color: '#7dc599' },
     // @ts-expect-error - TS does not like textTransform property
-    h2: { ...mainThemeVars.typography.h2, color: '#b98a61' },
+    h3: { ...mainThemeVars.typography.h3, color: '#b98a61' },
     body1: { color: '#383838' },
   },
 });
