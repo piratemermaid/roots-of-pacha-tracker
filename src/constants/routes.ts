@@ -1,9 +1,9 @@
 export const ROUTES: Record<string, string> = {
-  animalColors: 'animal_colors',
+  animalColors: 'animals',
   crops: 'crops',
 };
 
 export const ROUTE_LABELS: Record<string, string> = {
-  animalColors: 'Animal Colors',
+  animalColors: 'Animals',
   crops: 'Crops',
 };
