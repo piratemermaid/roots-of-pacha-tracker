@@ -1,4 +1,4 @@
-import type { AnimalName } from '../types/animal';
+import type { AnimalName } from '../types/data';
 
 const ANIMAL_COLORS: Record<AnimalName, string[]> = {
   Ibex: [

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import type { AnimalName } from './types/animal';
+import type { AnimalName } from './types/data';
 
 type State = {
   darkMode: boolean;

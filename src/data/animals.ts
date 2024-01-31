@@ -1,5 +1,5 @@
 import ANIMAL_COLORS from './animalColors';
-import type { Animal } from '../types/animal';
+import type { Animal } from '../types/data';
 
 const ANIMALS: Animal[] = [
   {

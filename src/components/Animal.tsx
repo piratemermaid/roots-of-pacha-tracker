@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 
 import { useStore } from '../store';
-import type { Animal } from '../types/animal';
+import type { Animal } from '../types/data';
 
 type Props = { animal: Animal };
 
