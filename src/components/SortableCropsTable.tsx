@@ -16,7 +16,7 @@ export default function SortableCropsTable() {
       name: crop.name,
       type: crop.type,
       daysGrowth: crop.daysGrowth,
-      daysRegrowth: crop.daysRegrowth ?? '- -',
+      daysRegrowth: crop.daysRegrowth ?? 0,
       seasons: crop.seasons.join(', '),
     };
   }
