@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import AnimalColors from './pages/AnimalColors';
 import Root from './pages/Root';
+import { ROUTES } from './constants/routes';
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: 'animal_colors',
+        path: ROUTES.animalColors,
         element: <AnimalColors />,
       },
     ],
