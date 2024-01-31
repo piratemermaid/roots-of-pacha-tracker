@@ -1,0 +1,11 @@
+:root {
+  #appLight {
+    --color-text-enabled: rgb(58, 58, 58);
+    --color-text-disabled: rgb(223, 206, 196);
+  }
+
+  #appDark {
+    --color-text-enabled: rgb(173, 173, 173);
+    --color-text-disabled: rgb(83, 83, 83);
+  }
+}

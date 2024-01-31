@@ -34,7 +34,9 @@ export default function Animal({ animal }: Props) {
                 }
                 sx={{
                   cursor: 'pointer',
-                  color: !userHasColor ? '#a8a8a7' : '#383838',
+                  color: !userHasColor
+                    ? 'var(--color-text-disabled)'
+                    : 'var(--color-text-enabled)',
                 }}
               >
                 {color}

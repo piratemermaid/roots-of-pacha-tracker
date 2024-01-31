@@ -13,6 +13,7 @@ import ANIMALS from './data/animals';
 import { useStore } from './store';
 import { lightTheme, darkTheme } from './themes';
 import './App.css';
+import './styles/variables.css';
 
 function App() {
   const darkMode = useStore((state) => state.darkMode);
@@ -24,37 +25,40 @@ function App() {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline enableColorScheme />
-      <Box sx={{ textAlign: 'right' }}>
-        <Switch
-          inputProps={{ 'aria-label': 'Dark mode' }}
-          checked={darkMode}
-          onClick={toggleDarkMode}
-        />
-      </Box>
 
-      <Grid container>
-        <Grid item xs={3}>
-          <Typography variant="h2">Notes</Typography>
-          <TextareaAutosize
-            value={notes}
-            onChange={(event) => setNotes(event.target.value)}
-            style={{ width: '80%', height: '80%' }}
+      <div id={darkMode ? 'appDark' : 'appLight'}>
+        <Box sx={{ textAlign: 'right' }}>
+          <Switch
+            inputProps={{ 'aria-label': 'Dark mode' }}
+            checked={darkMode}
+            onClick={toggleDarkMode}
           />
-        </Grid>
+        </Box>
 
-        <Grid item xs={9}>
-          <Typography variant="h2">Animals</Typography>
-          <Grid container direction="column">
-            {ANIMALS.map((animal) => {
-              return (
-                <Grid item key={animal.name}>
-                  <Animal animal={animal} />
-                </Grid>
-              );
-            })}
+        <Grid container>
+          <Grid item xs={3}>
+            <Typography variant="h2">Notes</Typography>
+            <TextareaAutosize
+              value={notes}
+              onChange={(event) => setNotes(event.target.value)}
+              style={{ width: '80%', height: '80%' }}
+            />
+          </Grid>
+
+          <Grid item xs={9}>
+            <Typography variant="h2">Animals</Typography>
+            <Grid container direction="column">
+              {ANIMALS.map((animal) => {
+                return (
+                  <Grid item key={animal.name}>
+                    <Animal animal={animal} />
+                  </Grid>
+                );
+              })}
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
+      </div>
     </ThemeProvider>
   );
 }
