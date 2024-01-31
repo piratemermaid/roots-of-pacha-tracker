@@ -26,7 +26,7 @@ export default function SeasonFilter({ season, filterBy, handleClick }: Props) {
       }}
     >
       <img
-        src={`/public/images/seasons/${season}.webp`}
+        src={`/images/seasons/${season}.webp`}
         style={{ position: 'relative', bottom: 3, left: -4 }}
       />
     </Grid>
