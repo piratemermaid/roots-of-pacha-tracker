@@ -7,6 +7,7 @@ export default function SortableCropsTable() {
     { id: 'name', label: 'Name' },
     { id: 'type', label: 'Type' },
     { id: 'daysGrowth', label: 'Days Growth' },
+    { id: 'lastDayToPlant', label: 'Last Day' },
     { id: 'daysRegrowth', label: 'Days Regrowth' },
     { id: 'seasons', label: 'Seasons' },
   ];
@@ -16,6 +17,7 @@ export default function SortableCropsTable() {
       name: crop.name,
       type: crop.type,
       daysGrowth: crop.daysGrowth,
+      lastDayToPlant: 28 - crop.daysGrowth,
       daysRegrowth: crop.daysRegrowth ?? 0,
       seasons: crop.seasons.join(', '),
     };
