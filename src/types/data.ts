@@ -26,7 +26,7 @@ export type Crop = {
   name: string;
   type: CropType;
   locations: CropLocation[];
-  initialGrowth: number;
-  regrowth: number | null;
+  daysGrowth: number;
+  daysRegrowth: number | null;
   seasons: Season[];
 };

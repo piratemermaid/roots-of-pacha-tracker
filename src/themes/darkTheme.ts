@@ -11,7 +11,7 @@ const darkTheme = createTheme({
       main: '#7dc599',
     },
     secondary: {
-      main: '#b98a61',
+      main: '#dfaf86',
     },
     action: {
       disabled: '#a8a8a7',

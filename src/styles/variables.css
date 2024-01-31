@@ -1,10 +1,16 @@
 :root {
   #appLight {
+    --color-primary: #7dc599;
+    --color-secondary: #b98a61;
+
     --color-text-enabled: rgb(58, 58, 58);
     --color-text-disabled: rgb(223, 206, 196);
   }
 
   #appDark {
+    --color-primary: #7dc599;
+    --color-secondary: #dfaf86;
+
     --color-text-enabled: rgb(173, 173, 173);
     --color-text-disabled: rgb(83, 83, 83);
   }

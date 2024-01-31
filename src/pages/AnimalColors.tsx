@@ -1,12 +1,12 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 
 import Animal from '../components/Animal';
 import ANIMALS from '../data/animals';
+import PageLayout from '../components/PageLayout';
 
 export default function AnimalColors() {
   return (
-    <>
-      <Typography variant="h2">Animals</Typography>
+    <PageLayout title="Animals">
       <Grid container direction="column">
         {ANIMALS.map((animal) => {
           return (
@@ -16,6 +16,6 @@ export default function AnimalColors() {
           );
         })}
       </Grid>
-    </>
+    </PageLayout>
   );
 }
