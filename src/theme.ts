@@ -12,7 +12,7 @@ const theme = createTheme({
       main: '#b98a61',
     },
     action: {
-      disabled: '#c4b09f',
+      disabled: '#a8a8a7',
     },
   },
 
@@ -25,6 +25,7 @@ const theme = createTheme({
       fontFamily: 'Garamond',
       color: '#b98a61',
     },
+    body1: { color: '#383838' },
   },
 });
 
