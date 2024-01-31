@@ -1,8 +1,8 @@
 import { Box, FormLabel, Grid, Switch } from '@mui/material';
 
 import NavbarLink from './NavbarLink';
-import { useStore } from '../store';
-import { ROUTES, ROUTE_LABELS } from '../constants/routes';
+import { useStore } from '../../store';
+import { ROUTES, ROUTE_LABELS } from '../../constants/routes';
 
 export default function Navbar() {
   const darkMode = useStore((state) => state.darkMode);

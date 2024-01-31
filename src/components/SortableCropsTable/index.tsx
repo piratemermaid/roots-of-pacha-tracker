@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
 
-import SortableTable from './SortableTable';
+import SortableTable from '../SortableTable';
 import SeasonFilter from './SeasonFilter';
-import CROPS from '../data/crops';
-import { SEASONS } from '../data/misc';
-import type { Crop } from '../types/data';
+import CROPS from '../../data/crops';
+import { SEASONS } from '../../data/misc';
+import type { Crop } from '../../types/data';
 
 type TableFilters = Record<string, string | null>;
 
