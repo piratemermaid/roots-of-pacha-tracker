@@ -6,6 +6,8 @@ import type { AnimalName } from './types/animal';
 type State = {
   darkMode: boolean;
   toggleDarkMode: () => void;
+  notes: string;
+  setNotes: (notes: string) => void;
   userAnimalColors: Record<AnimalName, string[]>;
   addUserAnimalColor: (animal: AnimalName, color: string) => void;
   removeUserAnimalColor: (animal: AnimalName, color: string) => void;
@@ -18,6 +20,10 @@ export const useStore = create<State, [['zustand/persist', State]]>(
       toggleDarkMode: () => {
         const darkMode = get().darkMode;
         return set({ darkMode: !darkMode });
+      },
+      notes: '',
+      setNotes: (notes) => {
+        return set({ notes });
       },
       userAnimalColors: {
         Ibex: [],
