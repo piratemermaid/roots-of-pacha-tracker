@@ -22,9 +22,6 @@ export function stableSort<T>(
 }
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
-  if (orderBy === 'daysRegrowth') {
-    console.log('>>', a, b);
-  }
   if (b[orderBy] < a[orderBy]) {
     return -1;
   }
