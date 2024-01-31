@@ -68,7 +68,7 @@ const ANIMAL_COLORS: Record<AnimalName, string[]> = {
     'Coral',
     'Storm',
     'Chocolate',
-    '???',
+    'Ash',
     'Cherry',
     'Rare1',
     'Rare2',
