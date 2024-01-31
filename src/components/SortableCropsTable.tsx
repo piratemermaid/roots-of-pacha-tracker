@@ -57,7 +57,7 @@ export default function SortableCropsTable() {
         <Grid item>
           <Typography variant="body2">Filters:</Typography>
         </Grid>
-        <Grid item sx={{ position: 'relative', bottom: -7 }}>
+        <Grid item>
           <Grid container spacing={1}>
             {SEASONS.map((season) => (
               <SeasonFilter
