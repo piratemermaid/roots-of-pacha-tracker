@@ -1,18 +1,17 @@
-import React from 'react';
 import { Grid, Typography } from '@mui/material';
 
 import SortableTable from '../SortableTable';
 import SeasonFilter from './SeasonFilter';
 import CROPS from '../../data/crops';
+import { useStore } from '../../store';
 import { SEASONS } from '../../data/misc';
 import type { Crop } from '../../types/data';
 
-type TableFilters = Record<string, string | null>;
-
-const defaultFilters = { season: null };
+export type TableFilters = Record<string, string | null>;
 
 export default function SortableCropsTable() {
-  const [filterBy, setFilterBy] = React.useState<TableFilters>(defaultFilters);
+  const filters = useStore((state) => state.cropFilters);
+  const setFilters = useStore((state) => state.setCropFilters);
 
   const headCells = [
     { id: 'name', label: 'Name' },
@@ -35,9 +34,9 @@ export default function SortableCropsTable() {
   }
 
   const filteredCrops = CROPS.filter((crop) => {
-    if (filterBy.season) {
+    if (filters.season) {
       // @ts-expect-error - I simply do not care
-      return crop.seasons.includes(filterBy.season);
+      return crop.seasons.includes(filters.season);
     }
 
     return crop;
@@ -46,9 +45,9 @@ export default function SortableCropsTable() {
   const rows = filteredCrops.map((crop) => createRow(crop));
 
   const handleSelectFilter = (name: string, value: string) => {
-    const currentValue = filterBy[name];
+    const currentValue = filters[name];
     const newValue = currentValue === value ? null : value;
-    setFilterBy({ ...filterBy, [name]: newValue });
+    setFilters({ ...filters, [name]: newValue });
   };
 
   return (
@@ -62,7 +61,7 @@ export default function SortableCropsTable() {
             {SEASONS.map((season) => (
               <SeasonFilter
                 season={season}
-                filterBy={filterBy.season}
+                filterBy={filters.season}
                 handleClick={handleSelectFilter}
               />
             ))}

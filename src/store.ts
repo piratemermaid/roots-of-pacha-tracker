@@ -2,15 +2,21 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 import type { AnimalName } from './types/data';
+import type { TableFilters } from './components/SortableCropsTable';
 
 type State = {
   darkMode: boolean;
   toggleDarkMode: () => void;
+
   notes: string;
   setNotes: (notes: string) => void;
+
   userAnimalColors: Record<AnimalName, string[]>;
   addUserAnimalColor: (animal: AnimalName, color: string) => void;
   removeUserAnimalColor: (animal: AnimalName, color: string) => void;
+
+  cropFilters: TableFilters;
+  setCropFilters: (newFilters: TableFilters) => void;
 };
 
 export const useStore = create<State, [['zustand/persist', State]]>(
@@ -21,10 +27,12 @@ export const useStore = create<State, [['zustand/persist', State]]>(
         const darkMode = get().darkMode;
         return set({ darkMode: !darkMode });
       },
+
       notes: '',
       setNotes: (notes) => {
         return set({ notes });
       },
+
       userAnimalColors: {
         Ibex: [],
         Boar: [],
@@ -53,6 +61,9 @@ export const useStore = create<State, [['zustand/persist', State]]>(
 
         return set({ userAnimalColors });
       },
+
+      cropFilters: { season: null },
+      setCropFilters: (newFilters) => set({ cropFilters: newFilters }),
     }),
     {
       name: 'userAnimals',
