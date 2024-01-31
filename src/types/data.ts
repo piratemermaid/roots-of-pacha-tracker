@@ -20,7 +20,7 @@ type CropLocation =
   | 'Jungle'
   | 'Horse Area';
 
-type Season = 'Spring' | 'Summer' | 'Fall' | 'Winter';
+export type Season = 'Spring' | 'Summer' | 'Fall' | 'Winter';
 
 export type Crop = {
   name: string;

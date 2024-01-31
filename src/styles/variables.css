@@ -1,17 +1,31 @@
 :root {
   #appLight {
+    --color-background: white;
+
     --color-primary: #7dc599;
     --color-secondary: #b98a61;
 
     --color-text-enabled: rgb(58, 58, 58);
     --color-text-disabled: rgb(223, 206, 196);
+
+    --color-season-spring: rgb(108, 235, 108);
+    --color-season-summer: rgb(240, 240, 129);
+    --color-season-fall: rgb(228, 182, 56);
+    --color-season-winter: rgb(208, 231, 238);
   }
 
   #appDark {
+    --color-background: rgb(36, 36, 36);
+
     --color-primary: #7dc599;
     --color-secondary: #dfaf86;
 
     --color-text-enabled: rgb(173, 173, 173);
     --color-text-disabled: rgb(83, 83, 83);
+
+    --color-season-spring: rgb(64, 179, 64);
+    --color-season-summer: rgb(209, 209, 38);
+    --color-season-fall: rgb(212, 165, 35);
+    --color-season-winter: rgb(104, 195, 223);
   }
 }
