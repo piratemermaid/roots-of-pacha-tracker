@@ -7,10 +7,10 @@ import PageLayout from '../components/PageLayout';
 export default function AnimalColors() {
   return (
     <PageLayout title="Animals">
-      <Grid container direction="column">
+      <Grid container>
         {ANIMALS.map((animal) => {
           return (
-            <Grid item key={animal.name}>
+            <Grid item key={animal.name} lg={4} sm={4} xs={6}>
               <Animal animal={animal} />
             </Grid>
           );

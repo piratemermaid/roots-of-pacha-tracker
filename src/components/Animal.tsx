@@ -1,4 +1,4 @@
-import { Checkbox, Grid, Typography } from '@mui/material';
+import { Checkbox, FormLabel, Grid, Typography } from '@mui/material';
 
 import { useStore } from '../store';
 import type { Animal, AnimalName } from '../types/data';
@@ -28,33 +28,30 @@ export default function Animal({ animal }: Props) {
     <>
       <Grid item sx={{ m: 2 }}>
         <Typography variant="h3">{animal.name}</Typography>
-      </Grid>
-      <Grid container spacing={2} justifyContent="center">
         {animal.colors.map((color) => {
           const userHasColor = userAnimalColors.includes(color);
 
           return (
-            <Grid item key={color}>
-              <Checkbox
-                checked={userHasColor}
-                onClick={() =>
-                  handleToggleColor(animal.name, color, userHasColor)
-                }
-              />
-              <Typography
-                variant="body1"
-                onClick={() =>
-                  handleToggleColor(animal.name, color, userHasColor)
-                }
+            <Grid
+              item
+              key={color}
+              onClick={() =>
+                handleToggleColor(animal.name, color, userHasColor)
+              }
+              sx={{ textAlign: 'left' }}
+            >
+              <Checkbox checked={userHasColor} />
+              <FormLabel
                 sx={{
                   cursor: 'pointer',
                   color: !userHasColor
                     ? 'var(--color-text-disabled)'
                     : 'var(--color-text-enabled)',
+                  fontSize: 14,
                 }}
               >
                 {color}
-              </Typography>
+              </FormLabel>
             </Grid>
           );
         })}
