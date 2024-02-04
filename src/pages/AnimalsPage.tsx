@@ -4,7 +4,7 @@ import Animal from '../components/Animal';
 import ANIMALS from '../data/animals';
 import PageLayout from '../components/PageLayout';
 
-export default function AnimalColors() {
+export default function AnimalsPage() {
   return (
     <PageLayout title="Animals">
       <Grid container>

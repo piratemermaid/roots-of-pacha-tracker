@@ -1,15 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button, Grid } from '@mui/material';
 
-type Props = { name: string; label: string };
+type Props = { path: string; label: string };
 
-export default function NavbarLink({ name, label }: Props) {
+export default function NavbarLink({ path, label }: Props) {
   const location = useLocation();
-  const isActive = location.pathname.slice(1) === name;
+  const isActive = location.pathname.slice(1) === path;
 
   return (
     <Grid item>
-      <Link to={name}>
+      <Link to={path}>
         <Button
           variant="contained"
           size="small"

@@ -9,7 +9,9 @@ type Props = {
 export default function PageLayout({ title, children }: Props) {
   return (
     <Box>
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant="h2" sx={{ mb: 2 }}>
+        {title}
+      </Typography>
       {children}
     </Box>
   );

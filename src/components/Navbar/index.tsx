@@ -1,8 +1,8 @@
 import { Box, FormLabel, Grid, Switch } from '@mui/material';
 
 import NavbarLink from './NavbarLink';
+import ROUTES from '../../constants/routes';
 import { useStore } from '../../store';
-import { ROUTES, ROUTE_LABELS } from '../../constants/routes';
 
 export default function Navbar() {
   const darkMode = useStore((state) => state.darkMode);
@@ -11,8 +11,8 @@ export default function Navbar() {
   return (
     <>
       <Grid container spacing={2}>
-        {Object.keys(ROUTES).map((key) => (
-          <NavbarLink key={key} name={ROUTES[key]} label={ROUTE_LABELS[key]} />
+        {ROUTES.map((route) => (
+          <NavbarLink key={route.key} path={route.path} label={route.label} />
         ))}
       </Grid>
 

@@ -1,9 +1,23 @@
-export const ROUTES: Record<string, string> = {
-  animalColors: 'animals',
-  crops: 'crops',
+import AnimalsPage from '../pages/AnimalsPage';
+import CropsPage from '../pages/CropsPage';
+import GiftsPage from '../pages/GiftsPage';
+
+type Route = {
+  key: string;
+  path: string;
+  label: string;
+  Component: () => JSX.Element;
 };
 
-export const ROUTE_LABELS: Record<string, string> = {
-  animalColors: 'Animals',
-  crops: 'Crops',
-};
+const ROUTES: Route[] = [
+  {
+    key: 'animals',
+    label: 'Animals',
+    path: '/animals',
+    Component: AnimalsPage,
+  },
+  { key: 'crops', label: 'Crops', path: '/crops', Component: CropsPage },
+  { key: 'gifts', label: 'Gifts', path: '/gifts', Component: GiftsPage },
+];
+
+export default ROUTES;
