@@ -1,4 +1,6 @@
-const VILLAGERS = {
+import type { VillagerData } from '../types/data';
+
+const VILLAGERS: Record<string, VillagerData> = {
   Acre: {
     clan: 'Pachan',
     birthday: { month: 'Winter', day: 17 },

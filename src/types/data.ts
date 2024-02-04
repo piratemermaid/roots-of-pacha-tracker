@@ -30,3 +30,14 @@ export type Crop = {
   daysRegrowth: number | null;
   seasons: Season[];
 };
+
+type Clan = 'Pachan' | 'Yakuan' | 'Mograni';
+
+export type VillagerData = {
+  clan: Clan;
+  birthday: {
+    month: string;
+    day: number;
+  };
+  gifts: string[];
+};
