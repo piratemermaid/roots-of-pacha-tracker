@@ -16,9 +16,16 @@ export default function Navbar() {
         ))}
       </Grid>
 
-      <Box sx={{ textAlign: 'right' }} onClick={toggleDarkMode}>
-        <Switch inputProps={{ 'aria-label': 'Dark mode' }} checked={darkMode} />
-        <FormLabel sx={{ '&:hover': { cursor: 'pointer' } }}>
+      <Box sx={{ textAlign: 'right' }}>
+        <Switch
+          inputProps={{ 'aria-label': 'Dark mode' }}
+          checked={darkMode}
+          onClick={toggleDarkMode}
+        />
+        <FormLabel
+          sx={{ '&:hover': { cursor: 'pointer' } }}
+          onClick={toggleDarkMode}
+        >
           Dark Mode
         </FormLabel>
       </Box>

@@ -1,6 +1,7 @@
 import AnimalsPage from '../pages/AnimalsPage';
 import CropsPage from '../pages/CropsPage';
 import GiftsPage from '../pages/GiftsPage';
+import MyDataPage from '../pages/MyDataPage';
 
 type Route = {
   key: string;
@@ -18,6 +19,7 @@ const ROUTES: Route[] = [
   },
   { key: 'crops', label: 'Crops', path: '/crops', Component: CropsPage },
   { key: 'gifts', label: 'Gifts', path: '/gifts', Component: GiftsPage },
+  { key: 'mydata', label: 'My Data', path: '/my_data', Component: MyDataPage },
 ];
 
 export default ROUTES;
