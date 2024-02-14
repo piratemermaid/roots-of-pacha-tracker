@@ -10,13 +10,15 @@ export default function Navbar() {
 
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{ mb: 4 }}>
         {ROUTES.map((route) => (
           <NavbarLink key={route.key} path={route.path} label={route.label} />
         ))}
       </Grid>
 
-      <Box sx={{ textAlign: 'right' }}>
+      <Box
+        sx={{ textAlign: 'right', position: 'absolute', top: 20, right: 10 }}
+      >
         <Switch
           inputProps={{ 'aria-label': 'Dark mode' }}
           checked={darkMode}
