@@ -44,7 +44,7 @@ export default function Fish({ fish }: Props) {
   }
 
   return (
-    <Grid item key={fish.name} xs={3}>
+    <Grid item key={fish.name} xs={3} sx={{ opacity: userHasFish ? 1 : 0.7 }}>
       <Card
         sx={{ p: 1 }}
         onClick={() => handleSelectFish(fish.name)}
