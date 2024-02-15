@@ -16,6 +16,10 @@ type State = {
   removeUserAnimalColor: (animal: AnimalName, color: string) => void;
   setUserAnimalColors: (animalColors: Record<AnimalName, string[]>) => void;
 
+  userFish: string[];
+  addUserFish: (fish: string) => void;
+  removeUserFish: (fish: string) => void;
+
   cropFilters: TableFilters;
   setCropFilters: (newFilters: TableFilters) => void;
 };
@@ -64,6 +68,13 @@ export const useStore = create<State, [['zustand/persist', State]]>(
       },
       setUserAnimalColors: (animalColors) =>
         set({ userAnimalColors: animalColors }),
+
+      userFish: [],
+      addUserFish: (fish) => set({ userFish: [...get().userFish, fish] }),
+      removeUserFish: (fish) =>
+        set({
+          userFish: get().userFish.filter((fishName) => fishName !== fish),
+        }),
 
       cropFilters: { season: null },
       setCropFilters: (newFilters) => set({ cropFilters: newFilters }),

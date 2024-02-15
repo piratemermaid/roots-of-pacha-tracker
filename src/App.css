@@ -12,3 +12,8 @@
   filter: grayscale(100%);
   opacity: 0.5;
 }
+
+/* UTIL CLASSES */
+.hover:hover {
+  cursor: pointer;
+}
