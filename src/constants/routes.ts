@@ -1,5 +1,6 @@
 import AnimalsPage from '../pages/AnimalsPage';
 import CalendarPage from '../pages/CalendarPage';
+import CookingPage from '../pages/CookingPage';
 import CropsPage from '../pages/CropsPage';
 import FishPage from '../pages/FishPage';
 import GiftsPage from '../pages/GiftsPage';
@@ -20,6 +21,13 @@ const ROUTES: Route[] = [
     Component: AnimalsPage,
   },
   { key: 'crops', label: 'Crops', path: '/crops', Component: CropsPage },
+  { key: 'fish', label: 'Fish', path: '/fish', Component: FishPage },
+  {
+    key: 'cooking',
+    label: 'Cooking',
+    path: '/cooking',
+    Component: CookingPage,
+  },
   { key: 'gifts', label: 'Gifts', path: '/gifts', Component: GiftsPage },
   {
     key: 'calendar',
@@ -27,7 +35,6 @@ const ROUTES: Route[] = [
     path: '/calendar',
     Component: CalendarPage,
   },
-  { key: 'fish', label: 'Fish', path: '/fish', Component: FishPage },
   { key: 'mydata', label: 'My Data', path: '/my_data', Component: MyDataPage },
 ];
 
