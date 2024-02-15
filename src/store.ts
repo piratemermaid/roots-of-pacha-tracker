@@ -19,6 +19,8 @@ type State = {
   userFish: string[];
   addUserFish: (fish: string) => void;
   removeUserFish: (fish: string) => void;
+  viewFishDetails: boolean;
+  setViewFishDetails: (boolean: boolean) => void;
 
   cropFilters: TableFilters;
   setCropFilters: (newFilters: TableFilters) => void;
@@ -75,6 +77,8 @@ export const useStore = create<State, [['zustand/persist', State]]>(
         set({
           userFish: get().userFish.filter((fishName) => fishName !== fish),
         }),
+      viewFishDetails: false,
+      setViewFishDetails: (boolean) => set({ viewFishDetails: boolean }),
 
       cropFilters: { season: null },
       setCropFilters: (newFilters) => set({ cropFilters: newFilters }),
