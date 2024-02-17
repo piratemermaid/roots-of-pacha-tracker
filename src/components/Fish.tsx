@@ -76,13 +76,17 @@ export default function Fish({ fish }: Props) {
           </Grid>
 
           <Grid item>
-            <Typography variant="body2">
-              {fish.weather === 'Any' ? 'Any Weather' : fish.weather}
-            </Typography>
+            <Typography variant="body2">{fish.locations.join(', ')}</Typography>
           </Grid>
         </Grid>
 
-        <Typography variant="body2">{fish.time.join(', ')}</Typography>
+        <Grid container justifyContent="space-between">
+          <Typography variant="body2">
+            {fish.weather === 'Any' ? 'Any Weather' : fish.weather}
+          </Typography>
+
+          <Typography variant="body2">{fish.time.join(', ')}</Typography>
+        </Grid>
       </Card>
     </Grid>
   );
