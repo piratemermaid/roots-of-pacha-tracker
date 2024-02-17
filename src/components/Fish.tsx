@@ -86,6 +86,8 @@ export default function Fish({ fish }: Props) {
           </Typography>
 
           <Typography variant="body2">{fish.time.join(', ')}</Typography>
+
+          <Typography variant="body2">Tier {fish.tier}</Typography>
         </Grid>
       </Card>
     </Grid>
